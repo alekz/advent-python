@@ -2,12 +2,13 @@ import os
 import sys
 from copy import deepcopy
 
+from utils.input_parsing import input_to_2d_array
+
 INPUT_PATH = os.path.join(os.path.dirname(__file__), "input.txt")
 
 
 def read_input(path: str) -> list[list[str]]:
-    with open(path) as f:
-        return list(map(list, f.read().strip().split("\n")))
+    return input_to_2d_array(path)
 
 
 def get_map_start(area_map: list[list[str]]) -> tuple[int, int]:

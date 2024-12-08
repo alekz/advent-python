@@ -1,15 +1,13 @@
 import os
 import sys
 
+from utils.input_parsing import input_to_array_of_strings
+
 INPUT_PATH = os.path.join(os.path.dirname(__file__), "input.txt")
 
 
 def read_input(path: str) -> list[str]:
-    lines = []
-    with open(path) as f:
-        for line in f:
-            lines.append(line)
-    return lines
+    return input_to_array_of_strings(path)
 
 
 def count_word(data: list[str], word: str) -> int:
