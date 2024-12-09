@@ -39,7 +39,7 @@ def navigate_map(area_map: list[list[str]]) -> bool:
     direction = 0
     x, y = get_map_start(area_map)
     area_map[y][x] = "X"
-    turns = [set(), set(), set(), set()]
+    turns: list[set] = [set(), set(), set(), set()]
 
     while True:
         dx, dy = directions[direction]

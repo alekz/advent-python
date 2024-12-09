@@ -9,9 +9,9 @@ def read_input(path: str) -> list[tuple[int, list[int]]]:
     input_data = []
     with open(path) as f:
         for line in f:
-            value, numbers = list(map(str.strip, line.split(":")))
-            value = int(value)
-            numbers = list(map(int, map(str.strip, numbers.split(" "))))
+            value_str, numbers_str = list(map(str.strip, line.split(":")))
+            value = int(value_str)
+            numbers = list(map(int, map(str.strip, numbers_str.split(" "))))
             input_data.append((value, numbers))
 
     return input_data

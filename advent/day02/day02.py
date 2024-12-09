@@ -18,7 +18,7 @@ def read_input(path: str) -> list[list[int]]:
 
 def is_safe_report(report: list[int]) -> bool:
     is_increasing_report = None
-    prev_value = None
+    prev_value = -1
     for i, value in enumerate(report):
         if i == 0:
             prev_value = value
