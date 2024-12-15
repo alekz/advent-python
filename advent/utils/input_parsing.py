@@ -6,6 +6,10 @@ def input_to_2d_array(path: str) -> list[list[str]]:
     return array
 
 
+def str_to_2d_array(text: str) -> list[list[str]]:
+    return list(map(lambda x: list(x.strip()), text.strip().split("\n")))
+
+
 def input_to_array_of_strings(path: str) -> list[str]:
     array = []
     with open(path) as f:
