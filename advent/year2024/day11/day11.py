@@ -19,7 +19,7 @@ def blink(numbers: list[int], times: int = 1) -> int:
     return count
 
 
-def get_count_after_blinks(number, times, cache) -> int:
+def get_count_after_blinks(number: int, times: int, cache: dict[int, list[int]]) -> int:
     if len(cache[number]) > times:
         pass
     elif times == 0:

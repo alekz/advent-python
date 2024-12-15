@@ -39,7 +39,7 @@ def navigate_map(area_map: list[list[str]]) -> bool:
     direction = 0
     x, y = get_map_start(area_map)
     area_map[y][x] = "X"
-    turns: list[set] = [set(), set(), set(), set()]
+    turns: list[set[tuple[int, int]]] = [set(), set(), set(), set()]
 
     while True:
         dx, dy = directions[direction]
@@ -64,7 +64,7 @@ def navigate_map(area_map: list[list[str]]) -> bool:
             area_map[y][x] = "X"
 
 
-def copy_map(from_map: list[list[str]], to_map: list[list[str]]):
+def copy_map(from_map: list[list[str]], to_map: list[list[str]]) -> None:
     width, height = len(from_map[0]), len(from_map)
     for y in range(height):
         for x in range(width):

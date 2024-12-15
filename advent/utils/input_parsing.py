@@ -18,6 +18,6 @@ def input_to_array_of_strings(path: str) -> list[str]:
     return array
 
 
-def input_to_array_of_integers(path: str, separator=" ") -> list[int]:
+def input_to_array_of_integers(path: str, separator: str = " ") -> list[int]:
     with open(path) as f:
         return list(map(int, filter(None, map(str.strip, f.read().split(separator)))))
