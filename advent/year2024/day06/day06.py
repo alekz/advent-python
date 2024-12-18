@@ -12,9 +12,7 @@ def read_input(path: str) -> list[list[str]]:
 
 
 def get_map_start(area_map: list[list[str]]) -> tuple[int, int]:
-    width, height = len(area_map[0]), len(area_map)
-
-    for y0 in range(height):
+    for y0 in range(len(area_map)):
         try:
             x0 = area_map[y0].index("^")
         except ValueError:
