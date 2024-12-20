@@ -19,7 +19,7 @@ def get_pattern_map(patterns: list[str]) -> PatternMap:
     for pattern in patterns:
         m = pattern_map
         for c in pattern:
-            if not c in m:
+            if c not in m:
                 m[c] = {}
             m = m[c]
         m["."] = {}
